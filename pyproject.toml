@@ -1,0 +1,27 @@
+[project]
+name = "llm-prefill"
+version = "0.1"
+description = "LLM plugin for managing and using prefilled responses"
+readme = "README.md"
+authors = [{ name = "Nick Mystic" }]
+license = { text = "Apache-2.0" }
+classifiers = ["License :: OSI Approved :: Apache Software License"]
+dependencies = ["llm"]
+
+[project.urls]
+Homepage = "https://github.com/ghostofpokemon/llm-prefill"
+Changelog = "https://github.com/ghostofpokemon/llm-prefill/releases"
+Issues = "https://github.com/ghostofpokemon/llm-prefill/issues"
+
+[project.entry-points.llm]
+prefill = "llm_prefill"
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[tool.pytest.ini_options]
+addopts = "--disable-socket"
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
